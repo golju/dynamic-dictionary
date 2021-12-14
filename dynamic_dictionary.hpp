@@ -297,7 +297,10 @@ inline any_t::any_t(std::vector<T> vec) : any_t(dict_t(vec)) {}
 
 template<class T>
 inline any_t::any_t(std::map<std::string, T> m) : any_t(dict_t(m)) {}
-
+  
+// =============================================================================
+// ================================= free functions ============================
+// =============================================================================
 template<class T>
 inline bool put(dict_t &dict, std::string key, T &&value)
 {
