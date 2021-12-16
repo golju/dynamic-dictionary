@@ -45,7 +45,7 @@ public:
   [[nodiscard]] T &get() const
   {
     if (typeid(T) != ptr_->type_info())
-      throw bad_any_cast("Bad any cast: get()!");
+      throw bad_any_cast("Bad any cast: method get");
     return static_cast<any_t_helper <T> * >(ptr_.get())->value_;
   }
 
@@ -53,7 +53,7 @@ public:
   [[nodiscard]] T get_value() const
   {
     if (typeid(T) != ptr_->type_info())
-      throw bad_any_cast("Bad any cast: get_value()");
+      throw bad_any_cast("Bad any cast: method get_value");
     return static_cast<any_t_helper <T> * >(ptr_.get())->value_;
   }
 
@@ -176,11 +176,11 @@ public:
   }
 
   template<class T>
-  void read(T &el) const;
+  void put_to(T &el) const;
   template<class T>
-  void read(std::vector<T> &vec) const;
+  void put_to(std::vector<T> &vec) const;
   template<class T>
-  void read(std::map<std::string, T> &m) const;
+  void put_to(std::map<std::string, T> &m) const;
 
   [[nodiscard]] bool is_dict(const std::string& key) const noexcept
   {
@@ -201,7 +201,7 @@ public:
     return *this;
   }
 
-  bool operator==(const dict_t &other) noexcept
+  bool operator==(const dict_t &other) const noexcept
   {
     return dict_ == other.dict_;
   }
