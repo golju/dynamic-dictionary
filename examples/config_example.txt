@@ -1,0 +1,21 @@
+{
+    "image_recognition_result": {
+        "id": 504,
+        "vehicle": "BUS",
+        "left_seat": {
+            "driver": "OK",
+            "belt": "NO",
+            "phone": "YES",
+            "pos": [100,560,120,120],
+            "status": "OK"
+        },
+        "recognition_status": "OK",
+        "right_seat": {
+            "driver": "UNDEFINED",
+            "belt": "UNDEFINED",
+            "phone": "UNDEFINED",
+            "pos": [-1,-1,-1,-1],
+            "status": "UNDEFINED"
+        }
+    }
+}
