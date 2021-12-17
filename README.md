@@ -107,7 +107,7 @@ std::map<std::string,std::string> rick_astley =
                                     {"Never gonna run around", "and desert you"},
                                     {"Never gonna make", "you cry"},
                                     {"Never gonna say","goodbye"},
-                                    {"Never gonna tell a lie", "and hurt you"} };
+                                    {"Never gonna tell", "a lie and hurt you"} };
   dynamic_dictionary::dict_t dictionary;
   dynamic_dictionary::write(dictionary, rick_astley);
 ```
@@ -119,7 +119,7 @@ In dictionary:
     "Never gonna make": "you cry",
     "Never gonna run around": "and desert you",
     "Never gonna say": "goodbye",
-    "Never gonna tell a lie": "and hurt you"
+    "Never gonna tell": "a lie and hurt you"
 }
 ```
 :white_check_mark: From composition of `std::vector and std::map`:
