@@ -108,8 +108,8 @@ std::map<std::string,std::string> rick_astley =
                                     {"Never gonna make", "you cry"},
                                     {"Never gonna say","goodbye"},
                                     {"Never gonna tell", "a lie and hurt you"} };
-  dynamic_dictionary::dict_t dictionary;
-  dynamic_dictionary::write(dictionary, rick_astley);
+dynamic_dictionary::dict_t dictionary;
+dynamic_dictionary::write(dictionary, rick_astley);
 ```
 In dictionary:
 ```
