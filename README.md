@@ -4,9 +4,19 @@
 :magnet: Work with [nlohmann/json](https://github.com/nlohmann/json).
 
 :grey_exclamation: Unordered **collections of arbitrary** key-accessed objects.
+
+:thumbsup: Tested on macOS BigSur 11.4.
+
+## Table of contents 
+* [Examples](#examples)
+  + [Creation](#creation)
+  + [Value access](#value-access)
+  + [Serialization and Deserialization](#serialization-and-deserialization)
+  + [Work with json](#work-with-json)
+* [Run example](#run-example)
+* [Run tests](#run-tests)
+ 
 ## Examples
-
-
 ### Creation
 It can be created like this:
 
@@ -47,7 +57,7 @@ dynamic_dictionary::put(dictionary, "inner_dictionary", inner_dictionary);
 
 ```
 
-### Value access:
+### Value access
 ```cpp
 dynamic_dictionary::dict_t dictionary = {
                                           {"int_value", 100},
@@ -70,7 +80,7 @@ Output:
 Excellent!
 ```
 
-### Serialization/Deserialization
+### Serialization and Deserialization
 :white_check_mark: From `std::vector`:
 ```cpp
 std::vector<std::string> jack_did_it = {"This", "is", "the", "house", "that", "Jack", "built."};
@@ -132,7 +142,7 @@ In dictionary:
   }
 }
 ```
-### Work with [nlohmann/json](https://github.com/nlohmann/json)
+### Work with json
 :white_check_mark: From dictionary to json `traverse_dict`:
 ```cpp
 std::map<std::string,std::vector<double>> constants =
@@ -192,4 +202,62 @@ In dictionary:
         }
     }
 }
+```
+## Run example
+```bash
+git clone https://github.com/golju/dynamic-dictionary.git
+cd dynamic-dictionary
+mkdir build
+cd build
+cmake ..
+make example0
+./examples/example0
+```
+Output:
+```json
+{
+    "image_recognition_result": {
+        "id": 504,
+        "left_seat": {
+            "belt": "NO",
+            "driver": "OK",
+            "phone": "YES",
+            "status": "OK"
+        },
+        "neural_network_info": {
+            "name": "BN-AlexNet",
+            "train_data_accuracy": 0.976,
+            "train_timestamp": 1639768762,
+            "version": "6aaf758"
+        },
+        "recognition_status": "OK",
+        "right_seat": {
+            "belt": "UNDEFINED",
+            "driver": "UNDEFINED",
+            "phone": "UNDEFINED",
+            "status": "UNDEFINED"
+        },
+        "vehicle": "BUS"
+    }
+}
+```
+## Run tests
+```bash
+git clone https://github.com/golju/dynamic-dictionary.git
+cd dynamic-dictionary
+mkdir build
+cd build
+cmake ..
+make tests
+./tests/tests
+```
+Output:
+```cpp
+[doctest] doctest version is "2.4.7"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases: 5 | 5 passed | 0 failed | 0 skipped
+[doctest] assertions: 8 | 8 passed | 0 failed |
+[doctest] Status: SUCCESS!
+
 ```
